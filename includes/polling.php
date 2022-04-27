@@ -218,7 +218,7 @@ function thold_poller_output(&$rrd_update_array) {
 				$chunks = 1;
 			}
 
-			$rrd_update_array_chunks = array_chunk($rrd_update_array, $chunks, true);
+			$rrd_update_array_chunks = array_chunk($rrd_update_array, (int) $chunks, true);
 
 			foreach ($rrd_update_array_chunks as $rrd_update_array_chunk) {
 				$rrd_reindexed      = array();
